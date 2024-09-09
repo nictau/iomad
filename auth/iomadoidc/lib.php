@@ -52,7 +52,7 @@ function auth_iomadoidc_initialize_customicon($filefullname) {
     // IOMAD
     require_once($CFG->dirroot . '/local/iomad/lib/company.php');
     $companyid = iomad::get_my_companyid(context_system::instance(), false);
-    if (!empty($companyid)) {
+    if (!empty($companyid) && $companyid > 0) {
         $postfix = "_$companyid";
     } else {
         $postfix = "";
@@ -338,7 +338,7 @@ function auth_iomadoidc_get_field_mappings() {
     // IOMAD
     require_once($CFG->dirroot . '/local/iomad/lib/company.php');
     $companyid = iomad::get_my_companyid(context_system::instance(), false);
-    if (!empty($companyid)) {
+    if (!empty($companyid) && $companyid > 0) {
         $postfix = "_$companyid";
     } else {
         $postfix = "";
@@ -392,7 +392,7 @@ function auth_iomadoidc_apply_default_email_mapping() {
     // IOMAD
     require_once($CFG->dirroot . '/local/iomad/lib/company.php');
     $companyid = iomad::get_my_companyid(context_system::instance(), false);
-    if (!empty($companyid)) {
+    if (!empty($companyid) && $companyid > 0) {
         $postfix = "_$companyid";
     } else {
         $postfix = "";
@@ -598,7 +598,7 @@ function auth_iomadoidc_is_setup_complete() {
     // IOMAD
     require_once($CFG->dirroot . '/local/iomad/lib/company.php');
     $companyid = iomad::get_my_companyid(context_system::instance(), false);
-    if (!empty($companyid)) {
+    if (!empty($companyid) && $companyid > 0) {
         $postfix = "_$companyid";
     } else {
         $postfix = "";
@@ -649,7 +649,7 @@ function auth_iomadoidc_get_idp_type_name() {
     // IOMAD
     require_once($CFG->dirroot . '/local/iomad/lib/company.php');
     $companyid = iomad::get_my_companyid(context_system::instance(), false);
-    if (!empty($companyid)) {
+    if (!empty($companyid) && $companyid > 0) {
         $postfix = "_$companyid";
     } else {
         $postfix = "";
@@ -683,7 +683,7 @@ function auth_iomadoidc_get_client_auth_method_name() {
     // IOMAD
     require_once($CFG->dirroot . '/local/iomad/lib/company.php');
     $companyid = iomad::get_my_companyid(context_system::instance(), false);
-    if (!empty($companyid)) {
+    if (!empty($companyid) && $companyid > 0) {
         $postfix = "_$companyid";
     } else {
         $postfix = "";
